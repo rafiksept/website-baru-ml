@@ -31,4 +31,4 @@ RUN python3 -m pip install -r /tmp/requirements.txt
 EXPOSE 8000
 
 # Jalankan entrypoint script
-ENTRYPOINT ["/trafficlight/entrypoint.sh"]
+CMD ["./entrypoint.sh"]
