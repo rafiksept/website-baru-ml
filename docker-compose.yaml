@@ -10,7 +10,7 @@ services:
         - ~/apps/data:/root/redis
         - ~/apps/redis.conf:/usr/local/etc/redis/redis.conf
       environment:
-        - REDIS_PASSWORD=my-password
+        - REDIS_PASSWORD=efdxc123
         - REDIS_PORT=6379
         - REDIS_DATABASES=16
   db:
