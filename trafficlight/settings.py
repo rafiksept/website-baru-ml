@@ -160,11 +160,11 @@ TEMPLATES = [
 ]
 
 # Celery settings
-CELERY_BROKER_URL = 'redis://:efdxc123@redis:6379/0'
+CELERY_BROKER_URL = 'redis://redis:6379/0'
 
 CELERY_TIMEZONE = 'Asia/Jakarta' 
 
-CELERY_RESULT_BACKEND = 'redis://:efdxc123@redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 
 
 CELERY_BEAT_SCHEDULE = {
