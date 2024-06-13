@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Buat direktori untuk source code app
-# WORKDIR /app
+WORKDIR /app
 
 # Install dependencies system
 RUN apt-get update && apt-get install -y \
