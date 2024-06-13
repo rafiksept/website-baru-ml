@@ -9,7 +9,7 @@ from datetime import date
 from collections import defaultdict
 from dashboard.webster import Webster
 import json
-import locale
+# import locale
 # import math
 
 # from myapp.models import MyModel  # Sesuaikan dengan nama model Anda
@@ -18,7 +18,7 @@ import locale
 def dashboard(request):
 
     today = datetime.today().date()
-    # print(today)
+    print(today)
     kendaraanHariIni = JumlahKendaraan.objects.filter(tanggal=today).aggregate(total=Sum('jumlah'))
     # Mengakses nilai total
     jumlahKendaraanHariIni = kendaraanHariIni['total'] if kendaraanHariIni['total'] is not None else 0
@@ -317,7 +317,7 @@ def perhitungan(request):
 
 def helper_date_web():
         # Set locale untuk memastikan nama bulan dalam bahasa Indonesia
-    locale.setlocale(locale.LC_TIME, 'id_ID.UTF-8')
+    # locale.setlocale(locale.LC_TIME, 'id_ID.UTF-8')
 
     # Dapatkan tanggal hari ini
     today = datetime.now()
@@ -332,7 +332,7 @@ def helper_date_web():
 
 def helper_date_interval():
     # Set locale untuk memastikan nama bulan dalam bahasa Indonesia
-    locale.setlocale(locale.LC_TIME, 'id_ID.UTF-8')
+    # locale.setlocale(locale.LC_TIME, 'id_ID.UTF-8')
 
     # Dapatkan tanggal hari ini
     today = datetime.now()
