@@ -22,12 +22,13 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # COPY Pipfile Pipfile.lock /app/
 # RUN pip install pipenv && pipenv install --deploy --ignore-pipfile
 
-# Salin source code proyek
-COPY . /app/
+
 # Install any needed packages specified in requirements.txt
 COPY requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install -r /tmp/requirements.txt
-
+RUN gdown https://drive.google.com/uc?id=1jc-4IpojaRaBuR_VQxcJUH3W5qnmOQ3o
+# Salin source code proyek
+COPY . /app/
 
 # Expose port untuk Django
 EXPOSE 8000

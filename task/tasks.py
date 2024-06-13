@@ -401,3 +401,46 @@ def object_detection9():
     except Exception as e:
         logger.error(f"Error saving to database: {e}")
         return str(e)
+    
+@shared_task
+def testing():
+    try : 
+        streets = [
+        {
+            "street_name": "Jl. Kawi Arah Utara (BRI Kawi)",
+            "stream_url": "http://stream.cctv.malangkota.go.id/WebRTCApp/streams/599118267175295987908194.m3u8?token=null",
+            "start_x": 736,
+            "start_y": 187,
+            "end_x": 1033,
+            "end_y":202
+        }
+        ]
+
+        street = streets[0] 
+        day_period = "night" # should be 'morning' / 'afternoon' / 'night'
+        date = datetime.today().strftime('%Y-%m-%d')
+        duration = 5 # in seconds
+
+        result = record_and_annotate_vehicles(street=street, day_period=day_period, date=date, recording_duration=duration, annotated_dir="static/result")
+        logger.info(result)
+        today = datetime.today().date()
+
+        for i in result :
+            if i["type"] == "car":
+                jenis = "Mobil"
+            else :
+                jenis = "Motor"
+            JumlahKendaraan.objects.create(
+                                    jalan=i['street'],
+                                    jam=i["time"],
+                                    jenis=jenis,
+                                    jumlah=i["count"],
+                                    tanggal=i["date"],
+                                    path_video=i["annotated_result_path"]
+                                    )
+                
+        return "save to Database"
+
+    except Exception as e:
+        logger.error(f"Error saving to database: {e}")
+        return str(e)

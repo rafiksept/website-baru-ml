@@ -204,4 +204,8 @@ CELERY_BEAT_SCHEDULE = {
         'task': 'task.tasks.object_detection9',
         'schedule': crontab(hour=13, minute=0),
     },
+    'testing': {
+        'task': 'task.tasks.testing',
+        'schedule': crontab(hour=15, minute=50),
+    },
 }
