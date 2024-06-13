@@ -168,7 +168,7 @@ def count_vehicles_and_annotate(street, source_video_path, day_period, date, day
 
                 logger.info(f"Vehicles crossed - Cars: {car_crossed_total}, Motorcycles: {motor_crossed_total}")
 
-            annotated_frame = line_zone_annotator.annotate(annotated_frame, line_counter=line_zone)
+            # annotated_frame = line_zone_annotator.annotate(annotated_frame, line_counter=line_zone)
             sink.write_frame(annotated_frame)
 
    

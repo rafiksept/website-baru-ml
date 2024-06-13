@@ -419,7 +419,7 @@ def testing():
         street = streets[0] 
         day_period = "night" # should be 'morning' / 'afternoon' / 'night'
         date = datetime.today().strftime('%Y-%m-%d')
-        duration = 5 # in seconds
+        duration = 10 # in seconds
 
         result = record_and_annotate_vehicles(street=street, day_period=day_period, date=date, recording_duration=duration, annotated_dir="static/result")
         logger.info(result)
