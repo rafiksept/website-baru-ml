@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install -y \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
+
 # Install pipenv dan dependencies proyek
 # COPY Pipfile Pipfile.lock /app/
 # RUN pip install pipenv && pipenv install --deploy --ignore-pipfile

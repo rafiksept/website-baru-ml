@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': 'trafficlight', 
         'USER': 'postgres',
         'PASSWORD': 'efdxc123',
-        'HOST': '127.0.0.1', 
+        'HOST': 'db', 
         'PORT': '5432',
     }
 }
