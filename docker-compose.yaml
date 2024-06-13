@@ -2,14 +2,15 @@ version: '3.9'
 
 services:
   db:
-      image: postgres:13.0-alpine
-      volumes:
-       - postgres_data:/var/lib/postgresql/data/
-      env_file:
-       - ./config/dev.env.db
-      
-      ports:
-          - "5432:5432"
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=efdxc123
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=trafficlight
   web:
     build: .
     command: python3 manage.py runserver
@@ -17,6 +18,7 @@ services:
       - .:/app
     ports:
       - "8000:8000"
+    
     env_file:
       - .env
 
