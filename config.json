@@ -1,4 +1,4 @@
 {
     "CLASS_ID": [1, 2],
-    "YOLO_VERSION": "best.pt"
+    "YOLO_VERSION": "yolov8l.pt"
 }
