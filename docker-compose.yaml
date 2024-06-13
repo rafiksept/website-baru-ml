@@ -27,8 +27,7 @@ services:
     command: python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 159.203.82.246:8000
     volumes:
       - .:/app
-    ports:
-      - "159.203.82.246:8000"
+    ports: ['159.203.82.246:8000:8000'] 
     env_file:
       - .env
 
