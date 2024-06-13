@@ -30,6 +30,8 @@ RUN gdown https://drive.google.com/uc?id=1jc-4IpojaRaBuR_VQxcJUH3W5qnmOQ3o
 # Salin source code proyek
 COPY . /app/
 
+RUN python3 manage.py makemigrations
+RUN python3 manage.py migrate
 # Expose port untuk Django
 EXPOSE 8000
 
