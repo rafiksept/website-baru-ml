@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
 # RUN pip install pipenv && pipenv install --deploy --ignore-pipfile
 
 # Salin source code proyek
-# COPY . /app/
+COPY . /app/
 # Install any needed packages specified in requirements.txt
 COPY requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install -r /tmp/requirements.txt
