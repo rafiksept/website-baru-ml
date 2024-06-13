@@ -24,7 +24,7 @@ services:
       - POSTGRES_DB=trafficlight
   web:
     build: .
-    command: python3 manage.py runserver
+    command: python3 manage.py makemigrations && python3 manage.py migrate && python3 manage.py runserver 159.203.82.246:8000
     volumes:
       - .:/app
     ports:

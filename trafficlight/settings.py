@@ -206,6 +206,6 @@ CELERY_BEAT_SCHEDULE = {
     },
     'testing': {
         'task': 'task.tasks.testing',
-        'schedule': crontab(hour=15, minute=50),
+        'schedule': crontab(hour=23, minute=5),
     },
 }
