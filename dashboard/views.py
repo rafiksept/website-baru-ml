@@ -183,7 +183,7 @@ def data_page(request):
     if jam == 'Tidak ada nilai' :
         jam = "07.00 - 08.00"
 
-    dataHariIni = JumlahKendaraan.objects.filter(tanggal=tanggal).filter(jenis="mobil").filter(jalan=jalan)[0]
+    dataHariIni = JumlahKendaraan.objects.filter(tanggal=tanggal).filter(jenis="mobil").filter(jalan=jalan).filter(jam=jam)[0]
     # print(dataHariIni)
     
 

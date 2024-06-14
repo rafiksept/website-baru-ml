@@ -170,15 +170,15 @@ CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 CELERY_BEAT_SCHEDULE = {
     'task1': {
         'task': 'task.tasks.object_detection1',
-        'schedule': crontab(hour=0, minute=0),
+        'schedule': crontab(hour=0, minute=47),
     },
     'task2': {
         'task': 'task.tasks.object_detection2',
-        'schedule': crontab(hour=0, minute=0),
+        'schedule': crontab(hour=0, minute=47),
     },
     'task3': {
         'task': 'task.tasks.object_detection3',
-        'schedule': crontab(hour=0, minute=0),
+        'schedule': crontab(hour=0, minute=47),
     },
     'task4': {
         'task': 'task.tasks.object_detection4',
