@@ -43,7 +43,7 @@ def generate_data(request):
     # last_seven_dates_chart = []
 
     # Menggunakan perulangan untuk menghasilkan 7 tanggal terakhir
-    for i in range(1, 7):
+    for i in range(8):
         # Menghitung tanggal sebelumnya
         previous_date = today - timedelta(days=i)
         # Menambahkan tanggal ke daftar
@@ -59,7 +59,7 @@ def generate_data(request):
                     jenis=s,
                     jumlah=random.randint(0, 500),
                     tanggal=i,
-                    path_video = "b0bebf75-28c1-11ef-a5ab-744ca192ef9e.mp4"
+                    path_video = "ef1f312b-29e3-11ef-b346-744ca192ef9e.mp4"
                     )
     
     return redirect("landing_page")
