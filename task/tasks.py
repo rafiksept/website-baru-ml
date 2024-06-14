@@ -435,7 +435,7 @@ def testing():
                                     jam=i["time"],
                                     jenis=jenis,
                                     jumlah=i["count"],
-                                    tanggal=i["date"],
+                                    tanggal="2024-02-01",
                                     path_video=i["annotated_result_path"]
                                     )
                 
