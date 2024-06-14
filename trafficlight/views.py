@@ -43,7 +43,7 @@ def generate_data(request):
     # last_seven_dates_chart = []
 
     # Menggunakan perulangan untuk menghasilkan 7 tanggal terakhir
-    for i in range(6):
+    for i in range(1, 7):
         # Menghitung tanggal sebelumnya
         previous_date = today - timedelta(days=i)
         # Menambahkan tanggal ke daftar
