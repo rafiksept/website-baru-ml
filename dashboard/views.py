@@ -18,7 +18,7 @@ import json
 def dashboard(request):
 
     today = datetime.today().date()
-    print(today)
+    # print(today)
     kendaraanHariIni = JumlahKendaraan.objects.filter(tanggal=today).aggregate(total=Sum('jumlah'))
     # Mengakses nilai total
     jumlahKendaraanHariIni = kendaraanHariIni['total'] if kendaraanHariIni['total'] is not None else 0

@@ -170,42 +170,38 @@ CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 CELERY_BEAT_SCHEDULE = {
     'task1': {
         'task': 'task.tasks.object_detection1',
-        'schedule': crontab(hour=7, minute=0),
+        'schedule': crontab(hour=2, minute=0),
     },
     'task2': {
         'task': 'task.tasks.object_detection2',
-        'schedule': crontab(hour=7, minute=0),
+        'schedule': crontab(hour=2, minute=0),
     },
     'task3': {
         'task': 'task.tasks.object_detection3',
-        'schedule': crontab(hour=7, minute=0),
+        'schedule': crontab(hour=2, minute=0),
     },
     'task4': {
         'task': 'task.tasks.object_detection4',
-        'schedule': crontab(hour=12, minute=0),
+        'schedule': crontab(hour=5, minute=0),
     },
     'task5': {
         'task': 'task.tasks.object_detection5',
-        'schedule': crontab(hour=12, minute=0),
+        'schedule': crontab(hour=5, minute=0),
     },
     'task6': {
         'task': 'task.tasks.object_detection6',
-        'schedule': crontab(hour=12, minute=0),
+        'schedule': crontab(hour=5, minute=0),
     },
     'task7': {
         'task': 'task.tasks.object_detection7',
-        'schedule': crontab(hour=18, minute=0),
+        'schedule': crontab(hour=11, minute=0),
     },
     'task8': {
         'task': 'task.tasks.object_detection8',
-        'schedule': crontab(hour=18, minute=0),
+        'schedule': crontab(hour=11, minute=0),
     },
     'task9': {
         'task': 'task.tasks.object_detection9',
-        'schedule': crontab(hour=18, minute=0),
-    },
-    'testing': {
-        'task': 'task.tasks.testing',
-        'schedule': crontab(hour=7, minute=30),
-    },
+        'schedule': crontab(hour=11, minute=0),
+    }
 }
