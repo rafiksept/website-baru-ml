@@ -31,7 +31,7 @@ def object_detection1():
         street = streets[0] 
         day_period = "morning" # should be 'morning' / 'afternoon' / 'night'
         date = datetime.today().strftime('%Y-%m-%d')
-        duration = 3600 # in seconds
+        duration = 60 # in seconds
 
         result = record_and_annotate_vehicles(street=street, day_period=day_period, date=date, recording_duration=duration, annotated_dir="static/result")
         logger.info(result)
@@ -74,7 +74,7 @@ def object_detection2():
         street = streets[0] 
         day_period = "morning" # should be 'morning' / 'afternoon' / 'night'
         date = datetime.today().strftime('%Y-%m-%d')
-        duration = 3600 # in seconds
+        duration = 60 # in seconds
 
         result = record_and_annotate_vehicles(street=street, day_period=day_period, date=date, recording_duration=duration, annotated_dir="static/result")
         logger.info(result)
@@ -118,7 +118,7 @@ def object_detection3():
         street = streets[0] 
         day_period = "morning" # should be 'morning' / 'afternoon' / 'night'
         date = datetime.today().strftime('%Y-%m-%d')
-        duration = 3600 # in seconds
+        duration = 60 # in seconds
 
         result = record_and_annotate_vehicles(street=street, day_period=day_period, date=date, recording_duration=duration, annotated_dir="static/result")
         logger.info(result)
